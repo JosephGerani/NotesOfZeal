@@ -20,5 +20,5 @@ class ToDoListForm(FlaskForm):
 
 class CreateFlashCardForm(FlaskForm):
     fcname = StringField('Name', validators = [InputRequired(), Length(min = 1, max = 50)])
-    fadescription = StringField('Description', validators = [InputRequired(), Length(min = 1, max = 500)])
+    fcdescription = StringField('Description', validators = [InputRequired(), Length(min = 1, max = 500)])
     fcsave = SubmitField('Add Flashcard')

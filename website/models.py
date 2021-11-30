@@ -16,7 +16,7 @@ class ToDoList(UserMixin, db.Model):
 
 class FlashCards(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key = True)
-    fcname = db.Column(db.String(50), unique = True)
+    fcname = db.Column(db.String(50))
     fcdescription = db.Column(db.String(500))
 
 @logging.user_loader

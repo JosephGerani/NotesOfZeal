@@ -6,13 +6,15 @@
 <div class="col">
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title"> {{cards.flashCard_name}} </h5>   
-            <p class="card-text">{{cards.flashCard_description}} </p>
-            <a href='deleteflashcards/{{cards.id}}'> Delete Flash Card</a>
+            <h5 class="card-title"> {{cards.fcname}} </h5>   
+            <p class="card-text">{{cards.fcdescription}} </p>
+            <a href="/deleteflashcards/{{cards.id}}"> Delete Flash Card</a>
             </div>
         </div>
 </div>
 {% endfor %}
+
+<p><a href="/createflashcards">Create More Flashcards</a></p>
 
 {% endblock %}
 

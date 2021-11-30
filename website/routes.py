@@ -98,11 +98,11 @@ def deleteflash(id):
     try:
         db.session.delete(delete_flash)
         db.session.commit()
-        return redirect ('/createflashcards')
+        return redirect ('/viewflashcards')
     except:
         return flash('Error')
 
-@myobj.route('viewflashcards')
+@myobj.route('/viewflashcards')
 def viewflash():
     flashcards = FlashCards.query.all()
     return render_template('viewflashcards.html', flashcards=flashcards)
